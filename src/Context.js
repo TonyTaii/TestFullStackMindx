@@ -7,16 +7,19 @@ export default function Provider({ children }) {
   const [check, setCheck] = useState("");
   const [entry, setEntry] = useState([]);
   const [eng,setEng]=useState(true)
-//   useEffect(() => {
-//     window.onbeforeunload = () => {
-//       localStorage.setItem("entry", JSON.stringify(entry));
-//       localStorage.setItem("eng", JSON.stringify(eng))
-//     };
-//     window.onload = () => {
-//       setEntry(JSON.parse(localStorage.getItem("entry")));
-//       setEng(JSON.parse(localStorage.getItem("eng")))
-//     };
-//   }, [entry]);
+  useEffect(() => {
+    window.onbeforeunload = () => {
+      localStorage.setItem("entry", JSON.stringify(entry));
+      localStorage.setItem("eng", JSON.stringify(eng))
+    };
+    if (localStorage.getItem("Sidebar") !== null) {
+        window.onload = () => {
+            setEntry(JSON.parse(localStorage.getItem("entry")));
+            setEng(JSON.parse(localStorage.getItem("eng")))
+          };
+        }
+    
+  }, [entry]);
 
   
 

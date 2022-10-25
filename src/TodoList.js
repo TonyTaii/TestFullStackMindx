@@ -52,7 +52,7 @@ const TodoList = () => {
   // console.log(diffDays + " days");
 
 const dateRemain=(a)=>{
-  const b=Math.floor(Math.abs(a -(new Date()))/ (1000 * 60 * 60 * 24))
+  const b=(Math.abs(a -(new Date()))/ (1000 * 60 * 60 * 24)).toFixed(0)
  return(`${b} days remaining to complete...`)
 }
 

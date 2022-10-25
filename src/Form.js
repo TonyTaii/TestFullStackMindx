@@ -29,16 +29,13 @@ function dhm (ms) {
   return days + ":" + hours + ":" + minutes + ":" + sec;
 }
    
-console.log(date)
-// console.log((new Date()).toISOString().split('T')[0])
-console.log((date-(new Date())))
 
   
     return (
       <form className="form">
         <input  style={{width:260}} placeholder={eng? "Enter task ..." : lang.holder}value={value} onChange={(e)=>setValue(e.target.value)}/>
         <input type='date'style={{width:200}} onChange={(e)=>{setDate(e.target.valueAsDate)}}/>
-        <button onClick={handleOnClick}>{eng? 'Submit': lang.submit}</button>
+        <button style={{width:110}} onClick={handleOnClick}>{eng? 'Submit': lang.submit}</button>
       </form>
     );
   };
