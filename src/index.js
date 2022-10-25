@@ -9,7 +9,7 @@ import Provider from './Context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider>
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
  
     <App />
     
