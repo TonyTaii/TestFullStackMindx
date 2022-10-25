@@ -34,10 +34,13 @@ body,
 
 .header {
   border-radius: 12px 12px 0px 0px;
-  padding: 10px;
+  
   background-color: #e1e1e1;
   font-size: 18px;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  
 }
 
 .todo-list-container {
@@ -54,6 +57,9 @@ body,
   display: flex;
   align-items: center;
 }
+
+.doneTask{ color: #9a9a9a;
+    text-decoration: line-through;}
 
 .todo-item-container.done {
   color: #9a9a9a;
